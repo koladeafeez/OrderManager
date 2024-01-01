@@ -1,0 +1,56 @@
+﻿@page "/orders"
+
+<PageTitle>Orders</PageTitle>
+
+<h2>Orders</h2>
+
+<div class="clearfix">
+    <NavLink class="nav-link btn btn-outline-primary float-end" href="createorder">
+        <span class="oi oi-plus" aria-hidden="true"></span> New Order
+    </NavLink>
+</div>
+@if (orders == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>State</th>
+                <th>Window Number</th>
+                <th>Created On</th>
+                <th> Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in orders)
+            {
+                <tr>
+                    <td>
+                        <NavLink class="nav-link" href="@($"orders/{order.Id}")">
+                            @order.Name
+                        </NavLink>
+                    </td>
+                    <td>@order.State</td>
+                    <td>@order.Windows.Count</td>
+                    <td>@order.CreatedOn.ToLocalTime().ToString("G")</td>
+                    <td>
+                        <form class="form" action="#" method="POST">
+                            <select class="action-box" @onchange="(e) => OnActionSelected(e,order)">
+                                <option>Actions</option>
+                                <option value="1">More Details</option>
+                                <option value="2">Update</option>
+                                <option value="3">Delete</option>
+                            </select>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

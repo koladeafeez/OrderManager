@@ -1,0 +1,55 @@
+﻿@page "/orders/{OrderId}"
+
+<h3>Order Detail</h3>
+
+@if (Order != null)
+{
+    <ul class="list-group">
+        <li class="list-group-item disabled"><b>Id  : </b> @Order.Id</li>
+        <li class="list-group-item"> <b>Name  :</b>  @Order.Name</li>
+        <li class="list-group-item"><b>State : </b> @Order.State</li>
+    </ul>
+    <ConfirmDialog @ref="dialog" />
+
+    <div class="mt-5">
+        @if (Order.Windows.Count > 0)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Window Quantity</th>
+                        <th>Total SubElement</th>
+                        <th>Created On</th>
+                        <th> Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var window in Order.Windows)
+                    {
+                        <tr>
+                            <td>
+                                <NavLink class="nav-link" href="@($"orders/{Order.Id}/windows/{window.Id}")">
+                                    @window.Name
+                                </NavLink>
+                            </td>
+                            <td>@window.QuantityOfWindows</td>
+                            <td>@window.TotalSubElements</td>
+                            <td>@window.CreatedOn.ToLocalTime().ToString("G")</td>
+                            <td>
+                                <form class="form" action="#" method="POST">
+                                    <select class="action-box" @onchange="(e) => OnActionSelected(e,window)">
+                                        <option>Actions</option>
+                                        <option value="1">More Details</option>
+                                        <option value="2">Update</option>
+                                        <option value="3">Delete</option>
+                                    </select>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+        </table>
+        }
+    </div>
+}

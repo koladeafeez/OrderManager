@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="HandleElement\DeleteElement\" />
+    <Folder Include="HandleOrder\DeleteOrder\" />
+    <Folder Include="HandleWindow\DeleteWindow\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrderManager.Data\OrderManager.Data.csproj" />
+    <ProjectReference Include="..\OrderManager.Shared\OrderManager.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

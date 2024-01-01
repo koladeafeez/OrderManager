@@ -1,0 +1,62 @@
+﻿@page "/orders/{OrderId}/windows/{WindowId}"
+
+<h3>Window Detail</h3>
+
+@if (Window != null)
+{
+    <ul class="list-group">
+        <li class="list-group-item disabled"><b>Id  : </b> @Window.Id</li>
+        <li class="list-group-item"> <b>Name  :</b>  @Window.Name</li>
+        <li class="list-group-item"><b>Window Quantity : </b> @Window.QuantityOfWindows</li>
+        <li class="list-group-item"><b>Total SubElement : </b> @Window.TotalSubElements</li>
+        <li class="list-group-item"><b>Created : </b> @Window.CreatedOn</li>
+        <li class="list-group-item"><b>Updated : </b> @Window.UpdatedAt</li>
+
+    </ul>
+
+    <ConfirmDialog @ref="dialog" />
+
+    <div class="mt-5">
+        @if (Window.SubElements.Count > 0)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Element</th>
+                        <th>Width</th>
+                        <th>Height</th>
+                        <th> Type</th>
+                        <th> Date Created</th>
+                        <th> Date Updated</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var element in Window.SubElements)
+                    {
+                        <tr>
+                            <td>
+                               @element.Id
+                            </td>
+                            <td>@element.Element</td>
+                            <td>@element.Width</td>
+                            <td>@element.Height</td>
+                            <td>@element.Type</td>
+                            <td>@element.CreatedOn.ToShortDateString()</td>
+                            <td>@element.UpdatedAt.ToShortDateString()</td>
+                            <td>
+                                <form class="form" action="#" method="POST">
+                                    <select class="action-box" @onchange="(e) => OnActionSelected(e,element)">
+                                        <option>Actions</option>
+                                        <option value="1">Delete</option>
+                                    </select>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+}

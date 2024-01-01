@@ -1,0 +1,28 @@
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\bin\Debug\net8.0\OrderManager.Data.deps.json
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\bin\Debug\net8.0\OrderManager.Data.runtimeconfig.json
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\bin\Debug\net8.0\OrderManager.Data.dll
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\bin\Debug\net8.0\OrderManager.Data.pdb
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.csproj.AssemblyReference.cache
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.AssemblyInfoInputs.cache
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.AssemblyInfo.cs
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.csproj.CoreCompileInputs.cache
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.dll
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\refint\OrderManager.Data.dll
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.pdb
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.genruntimeconfig.cache
+C:\Users\Koladeza\Desktop\Personal\SalesManager\OrderManager.Data\obj\Debug\net8.0\ref\OrderManager.Data.dll
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\bin\Debug\net8.0\OrderManager.Data.deps.json
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\bin\Debug\net8.0\OrderManager.Data.runtimeconfig.json
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\bin\Debug\net8.0\OrderManager.Data.dll
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\bin\Debug\net8.0\OrderManager.Data.pdb
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.csproj.AssemblyReference.cache
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.AssemblyInfoInputs.cache
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.AssemblyInfo.cs
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.csproj.CoreCompileInputs.cache
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.dll
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\refint\OrderManager.Data.dll
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.pdb
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\OrderManager.Data.genruntimeconfig.cache
+C:\Users\Koladeza\Desktop\Personal\New folder (3)\OrderManager.Data\obj\Debug\net8.0\ref\OrderManager.Data.dll

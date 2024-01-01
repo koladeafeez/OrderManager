@@ -1,0 +1,50 @@
+﻿@using Newtonsoft.Json
+@using OrderManager.Shared.Contracts.Views
+@using OrderManager.Shared.Enums
+
+
+<div class="card border-info mt-3">
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="col-12 clearfix">
+                <h4 class="float-start">Sub-element</h4>
+                <button type="button" class="btn btn-outline-danger float-end" @onclick="() => OnElementDelete.InvokeAsync(SubElement.Id)">Delete</button>
+            </div>
+            <div class="col">
+                <label for="element" class="form-label">Element</label>
+                <InputNumber @bind-Value="SubElement.Element" id="height" class="form-control"></InputNumber>
+            </div>
+            <div class="col">
+                <label for="type" class="form-label">Type</label>
+                <InputSelect @bind-Value="SubElement.Type" id="type" class="form-control">
+                    @foreach (var type in Enum.GetValues(typeof(ElementType)))
+                    {
+                        <option value="@type">@type</option>
+                    }
+                </InputSelect>
+            </div>
+
+            <div class="col">
+                <label for="width" class="form-label">Width</label>
+                <InputNumber @bind-Value="SubElement.Width" id="width" class="form-control"></InputNumber>
+            </div>
+
+            <div class="col">
+                <label for="height" class="form-label">Height</label>
+                <InputNumber @bind-Value="SubElement.Height" id="height" class="form-control" ></InputNumber>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public CreateSubElementView? SubElement { get; set; }
+
+    [Parameter]
+    public bool IsReadOnly { get; set; }
+
+    [Parameter]
+    public EventCallback<Guid> OnElementDelete { get; set; }
+
+}

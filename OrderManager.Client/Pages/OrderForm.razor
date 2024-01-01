@@ -1,0 +1,81 @@
+﻿@page "/createorder"
+@inject HttpClient Http;
+@inject NavigationManager NavigationManager;
+
+
+
+<PageTitle>Create Order</PageTitle>
+<h2>Create Order</h2>
+
+
+<EditForm class="my-3" Model=@CreateOrderView OnValidSubmit=@SubmitOrder>
+    <ObjectGraphDataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="row g-3 text-center">
+        <div class="col-8 col-lg-6">
+            <label for="orderName" class="form-label">Name</label>
+            <InputText @bind-Value="CreateOrderView.Name" id="orderName" class="form-control"></InputText>
+        </div>
+
+        <div class="col-4 col-lg-6">
+            <label for="orderState" class="form-label">State</label>
+            <InputText @bind-Value="CreateOrderView.State" id="orderState" class="form-control"></InputText>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="clearfix">
+                    <h4 class="float-start">Windows</h4>
+                    <button type="button" class="btn btn-outline-primary float-end" @onclick="AddWindow">Add Window</button>
+                </div>
+                @foreach (var window in CreateOrderView.Windows)
+                {
+                    <div class="well mt-3 border-primary">
+                        <div class="">
+                            <div class="row g-3">
+                                <div class="col-12 clearfix">
+                                    <h4 class="float-start">Window(s)</h4>
+                                    <button type="button" class="btn btn-outline-danger float-end" @onclick="() => DeleteWindow(window.Id)">Remove</button>
+                                </div>
+                                <div class="col-12">
+                                    <label for="windowName" class="form-label">Name</label>
+                                    <InputText @bind-Value="window.Name" id="windowName" class="form-control"></InputText>
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="quantityOfWindows" class="form-label">Quantity of Windows</label>
+                                    <InputNumber @bind-Value="window.QuantityOfWindows" id="quantityOfWindows" class="form-control"></InputNumber>
+                                </div>
+
+                                <div class="col-6">
+                                    <label for="totalSubElements" class="form-label">Total subElements</label>
+                                    <InputNumber @bind-Value="window.TotalSubElements" id="totalSubElements" class="form-control"></InputNumber>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="clearfix">
+                                            <h4 class="float-start">SubElement(s)</h4>
+                                            <button type="button" class="btn btn-outline-primary float-end" @onclick="() => AddSubElement(window.Id)">Add Element</button>
+                                        </div>
+
+                                        @foreach (var element in window.SubElements)
+                                        {
+                                            <SubElementForm SubElement="element"  OnElementDelete="(subElementId) => DeleteSubElement(window.Id, subElementId)" />
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="d-grid gap-2 col-6 mx-auto mt-3">
+        <button class="btn btn-primary" type="submit">Complete</button>
+    </div>
+</EditForm>
+
